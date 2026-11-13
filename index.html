@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070b0a">
+
+<title>AURA CRICKO ™</title>
+<meta name="description" content="Join Aura Cricko for cricket updates, match insights and analysis.">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '2349131955840696');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2349131955840696&ev=PageView&noscript=1"
+alt="">
+</noscript>
+<!-- END META PIXEL -->
+
+<style>
+:root {
+  --bg: #070b0a;
+  --green: #16c784;
+  --green-light: #a0ffd0;
+  --gold: #e6c477;
+  --text: #f5fff9;
+  --muted: #a3b2aa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 15px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(22,199,132,.17),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(230,196,119,.08),
+      transparent 40%
+    ),
+    #070b0a;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 455px;
+}
+
+.top-label {
+  text-align: center;
+  color: #a7c7b5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 19px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 36px 24px 30px;
+
+  border: 1px solid rgba(22,199,132,.27);
+  border-radius: 25px;
+
+  background: linear-gradient(
+    155deg,
+    rgba(20,39,30,.97),
+    rgba(9,15,12,.99) 55%,
+    rgba(17,28,21,.98)
+  );
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: -175px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(22,199,132,.22);
+  border-radius: 50%;
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+.logo {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid rgba(160,255,208,.75);
+
+  background: linear-gradient(
+    145deg,
+    #164d35,
+    #101a13
+  );
+
+  box-shadow:
+    0 0 0 6px rgba(22,199,132,.07),
+    0 10px 30px rgba(0,0,0,.35);
+
+  color: var(--green-light);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+h1 {
+  color: #f4fff8;
+  font-size: clamp(30px, 8vw, 39px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.12;
+}
+
+h1 span {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: .65em;
+  letter-spacing: 5px;
+}
+
+.separator {
+  width: 60px;
+  height: 2px;
+  margin: 23px auto 20px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--green),
+    transparent
+  );
+}
+
+.description {
+  max-width: 320px;
+  margin: auto;
+  color: #b5c5bb;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px 0 27px;
+}
+
+.feature {
+  padding: 9px 12px;
+  border-radius: 30px;
+
+  border: 1px solid rgba(22,199,132,.22);
+  background: rgba(22,199,132,.055);
+
+  color: #c6ead6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.join-btn {
+  width: 100%;
+  min-height: 58px;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+
+  padding: 15px;
+  border: none;
+  border-radius: 13px;
+
+  background: linear-gradient(
+    110deg,
+    #079c60,
+    #32e69b,
+    #0cba70
+  );
+
+  color: #04170d;
+  text-decoration: none;
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  box-shadow: 0 9px 28px rgba(22,199,132,.20);
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .18s ease;
+}
+
+.join-btn:active {
+  transform: scale(.985);
+}
+
+.telegram-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.small-note {
+  margin-top: 14px;
+  color: #82968a;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 20px 8px 0;
+  text-align: center;
+  color: #78877e;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.footer strong {
+  color: var(--gold);
+}
+
+@media(max-width:360px) {
+  .card {
+    padding: 30px 18px 24px;
+  }
+
+  .feature {
+    font-size: 9px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="wrapper">
+
+  <div class="top-label">
+    THE WORLD OF CRICKET
+  </div>
+
+  <section class="card">
+
+    <div class="logo">AC</div>
+
+    <p class="eyebrow">
+      WELCOME TO OUR OFFICIAL CHANNEL
+    </p>
+
+    <h1>
+      AURA
+      <span>CRICKO ™</span>
+    </h1>
+
+    <div class="separator"></div>
+
+    <p class="description">
+      Your cricket destination for match updates,
+      insightful analysis and the latest cricket coverage.
+      Stay connected with Aura Cricko.
+    </p>
+
+    <div class="features">
+      <span class="feature">CRICKET UPDATES</span>
+      <span class="feature">MATCH INSIGHTS</span>
+      <span class="feature">ANALYSIS</span>
+    </div>
+
+    <a
+      href="https://t.me/+6ah60rDmfi05ZGFl"
+      class="join-btn"
+      id="joinButton"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <svg class="telegram-icon"
+           viewBox="0 0 24 24"
+           fill="currentColor"
+           aria-hidden="true">
+        <path d="M21.7 4.4 18.5 19.5c-.24 1.07-.87 1.33-1.76.83l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.95 9.01-8.14c.39-.35-.08-.55-.6-.2L6.17 13.3l-4.78-1.5c-1.04-.33-1.06-1.04.22-1.55L20.3 3.1c.86-.31 1.61.21 1.4 1.3Z"/>
+      </svg>
+
+      JOIN TELEGRAM NOW
+
+    </a>
+
+    <p class="small-note">
+      Tap above to connect with our Telegram channel.
+    </p>
+
+  </section>
+
+  <footer class="footer">
+    <strong>AURA CRICKO ™</strong><br>
+    Cricket updates and informational content.<br>
+    Please make your own decisions responsibly.
+  </footer>
+
+</main>
+
+<!-- SUBSCRIBE EVENT -->
+<script>
+(function() {
+
+  const button = document.getElementById('joinButton');
+  let subscribeSent = false;
+
+  button.addEventListener('click', function(event) {
+
+    event.preventDefault();
+
+    if (subscribeSent) return;
+
+    subscribeSent = true;
+
+    // Track one Subscribe event per page load.
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Subscribe');
+    }
+
+    const telegramLink = button.href;
+
+    // Give the Pixel a short time to send the event.
+    setTimeout(function() {
+      window.location.href = telegramLink;
+    }, 350);
+
+  });
+
+})();
+</script>
+
+</body>
+</html>
